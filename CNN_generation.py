@@ -12,9 +12,10 @@ def CNN_global(numero):
         1: CNN_VGG,
         2: CNN_Wolkow,
         3: DeepDog,
-        'Deepdog': DeepDog, 'DeepDog' : DeepDog, 'deepdog' : DeepDog,
+        'Deepdog': DeepDog, 'DeepDog': DeepDog, 'deepdog': DeepDog,
         'CNN_VGG': CNN_VGG,
-        'CNN_Wolkow': CNN_Wolkow,'CNN_wolkow': CNN_Wolkow,
+        'CNN_Wolkow': CNN_Wolkow, 'CNN_wolkow': CNN_Wolkow,
+        'DeepDogSource': DeepDogSource,
     }
     # Get the function from switcher dictionary
     func = switcher.get(numero, lambda: "Invalid month")
@@ -85,6 +86,66 @@ def CNN_Wolkow(input_shape, output_number):
 
 
 def DeepDog(input_shape, output_number):
+    """
+    Returns a keras CNN model compiled, similar to the one
+    described on the Deepdog project website :
+    https://medium.com/@timanglade/how-hbos-silicon-valley-built-not-hotdog-with-mobile-tensorflow-keras-react-native-ef03260747f3
+    Consulted in June 2018
+    """
+    model = Sequential(name='deepdog')
+
+    model.add(Convolution2D(32, (3, 3), strides=(2, 2), padding='same', input_shape=input_shape))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    model.add(SeparableConvolution2D(32, (3, 3), strides=(1, 1), padding='same'))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    model.add(SeparableConvolution2D(64, (3, 3), strides=(2, 2), padding='same'))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    model.add(SeparableConvolution2D(128, (3, 3), strides=(1, 1), padding='same'))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    model.add(SeparableConvolution2D(128, (3, 3), strides=(2, 2), padding='same'))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    model.add(SeparableConvolution2D(256, (3, 3), strides=(1, 1), padding='same'))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    model.add(SeparableConvolution2D(256, (3, 3), strides=(2, 2), padding='same'))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    for _ in range(5):
+        model.add(SeparableConvolution2D(512, (3, 3), strides=(1, 1), padding='same'))
+        model.add(BatchNormalization())
+        model.add(Activation('elu'))
+
+    model.add(SeparableConvolution2D(512, (3, 3), strides=(2, 2), padding='same'))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    model.add(SeparableConvolution2D(1024, (3, 3), strides=(1, 1), padding='same'))
+    model.add(BatchNormalization())
+    model.add(Activation('elu'))
+
+    model.add(GlobalAveragePooling2D())
+    model.add(Dense(output_number, activation='sigmoid'))  # output layer
+
+    model.compile(loss='binary_crossentropy',
+                  optimizer='rmsprop',
+                  metrics=['accuracy'])
+
+    return model
+
+
+def DeepDogSource(input_shape, output_number):
     """
     Returns a keras CNN model compiled, similar to the one
     described on the Deepdog project website :

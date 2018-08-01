@@ -11,14 +11,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="saveImageDataset.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_modules/saveImageDataset.py">
+      <file leaf-file-name="plotModel.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_modules/plotModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CNN_generation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CNN_generation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="14" column="66" lean-forward="true" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -36,9 +42,16 @@
     <findStrings>
       <find>x_test</find>
       <find>to_save_model</find>
+      <find>input</find>
+      <find>x</find>
+      <find>* alpha</find>
+      <find>(model)</find>
     </findStrings>
     <replaceStrings>
       <replace>of_saved_model</replace>
+      <replace>model</replace>
+      <replace>model.add(</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -50,16 +63,17 @@
         <option value="$PROJECT_DIR$/test_modules/displayDataset.py" />
         <option value="$PROJECT_DIR$/main_training.py" />
         <option value="$PROJECT_DIR$/main_evaluate_guess.py" />
-        <option value="$PROJECT_DIR$/CNN_generation.py" />
         <option value="$PROJECT_DIR$/test_modules/saveImageDataset.py" />
+        <option value="$PROJECT_DIR$/test_modules/plotModel.py" />
+        <option value="$PROJECT_DIR$/CNN_generation.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2197" />
-    <option name="y" value="-15" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -105,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.saveImageDataset">
+  <component name="RunManager" selected="Python.plotModel">
     <configuration name="displayDataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CNN-FamilyPolling" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,6 +174,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="plotModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CNN-FamilyPolling" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_modules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_modules/plotModel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="saveImageDataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CNN-FamilyPolling" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -183,9 +215,11 @@
       <item itemvalue="Python.main_training" />
       <item itemvalue="Python.saveImageDataset" />
       <item itemvalue="Python.main_evaluate_guess" />
+      <item itemvalue="Python.plotModel" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plotModel" />
         <item itemvalue="Python.saveImageDataset" />
         <item itemvalue="Python.main_evaluate_guess" />
         <item itemvalue="Python.main_training" />
@@ -234,17 +268,42 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test_modules/plotModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CNN_generation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="173" column="7" lean-forward="true" selection-start-line="173" selection-start-column="7" selection-end-line="173" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_modules/plotModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_modules/saveImageDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_modules/displayDataset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -259,9 +318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
-          <folding>
-            <element signature="e#94#105#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -269,9 +325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -303,9 +356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -320,48 +370,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#37#55#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CNN_generation.py">
+    <entry file="file://$PROJECT_DIR$/test_modules/STM11.png" />
+    <entry file="file://$PROJECT_DIR$/test_modules/STM3.png" />
+    <entry file="file://$PROJECT_DIR$/test_modules/STM18.png" />
+    <entry file="file://$PROJECT_DIR$/test_modules/saveImageDataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_evaluate_guess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="e#94#105#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="209">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_modules/STM11.png">
+    <entry file="file://$PROJECT_DIR$/test_modules/model.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_modules/STM3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_modules/STM18.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_modules/saveImageDataset.py">
+    <entry file="file://$PROJECT_DIR$/test_modules/plotModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CNN_generation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="66" lean-forward="true" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
         </state>
       </provider>
     </entry>
