@@ -13,7 +13,7 @@ def CNN_global(numero):
         2: CNN_Wolkow,
         3: DeepDog,
         'Deepdog': DeepDog, 'DeepDog': DeepDog, 'deepdog': DeepDog,
-        'CNN_VGG': CNN_VGG,
+        'CNN_VGG': CNN_VGG, "CNN_Vgg": CNN_VGG,
         'CNN_Wolkow': CNN_Wolkow, 'CNN_wolkow': CNN_Wolkow,
         'DeepDogSource': DeepDogSource,
     }
