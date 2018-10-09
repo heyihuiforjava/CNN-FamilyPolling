@@ -40,18 +40,19 @@ def prepare_Dataset_bin(category):
     print(x_train.shape[0], 'train samples')
     print(x_test.shape[0], 'test samples')
 
-    datagen = ImageDataGenerator(
-        featurewise_center=False,  # set input mean to 0 over the dataset
-        samplewise_center=False,  # set each sample mean to 0
-        featurewise_std_normalization=False,  # divide inputs by std of the dataset
-        samplewise_std_normalization=False,  # divide each input by its std
-        zca_whitening=False,  # apply ZCA whitening
-        rotation_range=90,  # randomly rotate images in the range (degrees, 0 to 180)
-        width_shift_range=0.2,  # randomly shift images horizontally (fraction of total width)
-        height_shift_range=0.2,  # randomly shift images vertically (fraction of total height)
-        horizontal_flip=False,  # randomly flip images
-        vertical_flip=False)  # randomly flip images
-    datagen.fit(x_train)
+    ##PROBLEM : ImageDataGenerator usage misunderstood, need to be changed
+    # datagen = ImageDataGenerator(
+    #     featurewise_center=False,  # set input mean to 0 over the dataset
+    #     samplewise_center=False,  # set each sample mean to 0
+    #     featurewise_std_normalization=False,  # divide inputs by std of the dataset
+    #     samplewise_std_normalization=False,  # divide each input by its std
+    #     zca_whitening=False,  # apply ZCA whitening
+    #     rotation_range=90,  # randomly rotate images in the range (degrees, 0 to 180)
+    #     width_shift_range=0.2,  # randomly shift images horizontally (fraction of total width)
+    #     height_shift_range=0.2,  # randomly shift images vertically (fraction of total height)
+    #     horizontal_flip=False,  # randomly flip images
+    #     vertical_flip=False)  # randomly flip images
+    # datagen.fit(x_train)
 
     return (x_train, y_train), (x_test, y_test)
 
@@ -75,10 +76,7 @@ if __name__ == "__main__":
     for data_category in [0, 1, 2, 3, 4, 5]:
         #  recover and format dataset for this data category
         (x_train, y_train), (x_test, y_test) = prepare_Dataset_bin(data_category)
-        x_train = x_train[:10]
-        y_train = y_train[:10]
-        x_test = x_test[:10]
-        y_test = y_test[:10]
+
         # Train 3 CNN for each category
         for modelNo in range(3):
             # Creation of new model

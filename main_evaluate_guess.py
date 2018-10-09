@@ -109,8 +109,8 @@ if __name__ == "__main__":
     y_test[y_test != 1] = 0
 
     # reduction for test
-    y_test = y_test[:10]
-    x_test = x_test[:10]
+    # y_test = y_test[:10]
+    # x_test = x_test[:10]
 
     # Having the family vote over the x_test dataset
     print(majority_polling_global(x_test=x_test,y_test=y_test))
