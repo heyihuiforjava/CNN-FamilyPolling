@@ -81,8 +81,8 @@ if __name__ == "__main__":
     t = time.time()
     # variables
     model_to_use = "Deepdog"  # must be one of the name in CNN_global() dict
-    folder_of_saved_model = "models\\"
-    file_of_saved_model = "my_%s_model"%model_to_use
+    folder_of_saved_model = "model" + os.sep
+    file_of_saved_model = "my_%s_model" % model_to_use
     nb_training_session = 1
     epoch_by_training_session = 1
     img_rows = img_cols = image_size = 128
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     input_shape = (img_rows, img_cols, 1)  # image image_size*image_size greyscale
 
     # load the dataset from GDrive to VM
-    dataset_file = 'datasets\\Training_Images_%d_mean.mat' % image_size
+    dataset_file = 'datasets' + os.sep + 'Training_Images_%d_mean.mat' % image_size
     print(dataset_file)
 
     # # Evaluating the family
@@ -113,5 +113,5 @@ if __name__ == "__main__":
     # x_test = x_test[:10]
 
     # Having the family vote over the x_test dataset
-    print(majority_polling_global(x_test=x_test,y_test=y_test))
+    print(majority_polling_global(x_test=x_test, y_test=y_test))
     print("time elapsed", time.time() - t)

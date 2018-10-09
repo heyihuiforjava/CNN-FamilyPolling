@@ -3,6 +3,7 @@ import numpy as np
 from keras import backend as K
 from keras.preprocessing.image import ImageDataGenerator
 from scipy.io import loadmat
+from os import sep
 
 from CNN_generation import CNN_global
 
@@ -60,7 +61,7 @@ def prepare_Dataset_bin(category):
 if __name__ == "__main__":
     # variables
     model_to_use = "Deepdog"  # must be one of the name in CNN_global() dict
-    folder_to_save_model = "models\\"
+    folder_to_save_model = "models" + os.sep
     file_to_save_model = "my_%s_model" % model_to_use
     nb_training_session = 1
     epoch_by_training_session = 1
@@ -69,7 +70,7 @@ if __name__ == "__main__":
     input_shape = (img_rows, img_cols, 1)  # image image_size*image_size greyscale
 
     # load the dataset from GDrive to VM
-    dataset_file = 'datasets\\Training_Images_%d_mean.mat' % image_size
+    dataset_file = 'datasets' + os.sep + 'Training_Images_%d_mean.mat' % image_size
     print(dataset_file)
 
     # #Training the family's members
